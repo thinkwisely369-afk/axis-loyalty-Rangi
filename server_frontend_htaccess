@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Strictly allow the api path
+  RewriteCond %{REQUEST_URI} ^/api [NC]
+  RewriteRule . - [L]
+  
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>

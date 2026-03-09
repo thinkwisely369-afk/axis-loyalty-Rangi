@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Feb 2026 20:51:38 GMT
+Content-Type: application/json
+Content-Length: 49
+Connection: keep-alive
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS, DELETE, PUT
+access-control-allow-headers: Content-Type, Authorization, X-Requested-With, X-API-Token, X-XSRF-Token
+access-control-allow-credentials: true
+Cache-Control: no-cache, private
+vary: Origin,Accept-Encoding,User-Agent
+Content-Encoding: br
+Server: cloudflare
+x-turbo-charged-by: LiteSpeed
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=qD4f52QHKv2kNVIQ7wAZxhcZqHlFQ8iFrjTlFHygGtMdsa6TLiJ5fD31dqFXkdlCuq%2FFQOt0XG2OlEyUhpLThqcjuqV2WzS3UmcYTVkE7A%3D%3D"}]}
+CF-RAY: 9ccef70e4aaecbed-MCI
+alt-svc: h3=":443"; ma=86400
+

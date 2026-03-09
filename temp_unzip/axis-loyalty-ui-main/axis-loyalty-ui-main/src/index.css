@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Axis Loyalty App - Ultra-modern fintech dark theme
+   Deep charcoal backgrounds, electric blue & silver accents
+   All colors in HSL */
+
+@layer base {
+  :root {
+    /* Dark fintech palette - always dark mode */
+    --background: 240 6% 4%;
+    --background-elevated: 240 5% 8%;
+    --background-card: 240 4% 11%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 4% 11%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 5% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Electric neon blue - primary brand color */
+    --primary: 191 100% 42%;
+    --primary-foreground: 240 6% 4%;
+    --primary-glow: 191 100% 50%;
+    
+    /* Silver/platinum accent */
+    --secondary: 220 9% 76%;
+    --secondary-foreground: 240 6% 4%;
+    
+    /* Muted charcoal */
+    --muted: 240 4% 16%;
+    --muted-foreground: 220 9% 56%;
+    
+    /* Accent - electric blue variants */
+    --accent: 191 100% 42%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 4% 18%;
+    --input: 240 4% 16%;
+    --ring: 191 100% 42%;
+    
+    --radius: 1.5rem;
+    
+    /* Custom luxury brand colors */
+    --gold: 45 93% 47%;
+    --platinum: 220 9% 80%;
+    --emerald: 160 84% 39%;
+    --rose: 350 89% 60%;
+    
+    /* Glassmorphism */
+    --glass-bg: 240 4% 11% / 0.6;
+    --glass-border: 0 0% 100% / 0.08;
+    --glass-blur: 20px;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(191 100% 42%), hsl(210 100% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(240 4% 13%), hsl(240 4% 9%));
+    --gradient-glow: radial-gradient(circle at center, hsl(191 100% 50% / 0.15), transparent 70%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px -10px hsl(191 100% 50% / 0.5);
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 8px 32px -8px hsl(0 0% 0% / 0.6);
+
+    --sidebar-background: 240 5% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 191 100% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 4% 18%;
+    --sidebar-ring: 191 100% 42%;
+  }
+
+  /* Always dark mode */
+  .dark {
+    --background: 240 6% 4%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(180deg, hsl(240 6% 4%) 0%, hsl(240 5% 6%) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid hsl(var(--glass-border));
+  }
+  
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 8px hsl(191 100% 50% / 0.4));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsl(191 100% 50% / 0.7));
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
