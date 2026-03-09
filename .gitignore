@@ -23,4 +23,23 @@ dist-ssr
 *.sln
 *.sw?
 
+# Temporary and checking files
+*.py
+*.php
+*.php.fix
+*.zip
+*.tar.gz
+*.b64
+*.sh
+*.fix
+*.txt
+*.bin
+temp_unzip/
+test_zip_expand/
+*.mjs
+*.log
+*.lockb
+*.phar
+.env.production
+
 .agent
